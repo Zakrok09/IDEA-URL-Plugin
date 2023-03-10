@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b1bc0d-a7b9-4cfe-83e6-1523b9ea323b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/BrowserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/WebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="13b1bc0d-a7b9-4cfe-83e6-1523b9ea323b" name="Changes" comment="feat: Add service and JBCef browser functionality">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/BrowserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/BrowserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/Modal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/Modal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/actions/URLModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/actions/URLModal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/WebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/urlplugin/WebView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +91,16 @@
       <option name="presentableId" value="Default" />
       <updated>1678391247227</updated>
       <workItem from="1678391248604" duration="2119000" />
-      <workItem from="1678401577469" duration="10807000" />
+      <workItem from="1678401577469" duration="11243000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Add service and JBCef browser functionality">
+      <created>1678412644388</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678412644388</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,5 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: Add service and JBCef browser functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add service and JBCef browser functionality" />
   </component>
 </project>
