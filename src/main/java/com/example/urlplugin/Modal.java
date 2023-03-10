@@ -38,7 +38,7 @@ public class Modal extends DialogWrapper {
             this.openLink1 = new DialogWrapperAction("Open URL 1") {
                 @Override
                 protected void doAction(ActionEvent e) {
-                    bs.browser.loadURL("https://www.youtube.com/watch?v=hWvM6de6mG8");
+                    bs.browser.loadURL("https://www.youtube.com/watch?v=nl8o9PsJPAQ");
                 }
             };
 

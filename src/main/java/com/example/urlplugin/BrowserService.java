@@ -12,7 +12,7 @@ public class BrowserService {
      * A Browser service for the browser panel
      */
     public BrowserService() {
-        this.browser = new JBCefBrowser("https://www.youtube.com/watch?v=W86cTIoMv2U");
+        this.browser = new JBCefBrowser("https://www.youtube.com/");
     }
 
 }
