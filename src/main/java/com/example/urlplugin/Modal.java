@@ -1,14 +1,54 @@
 package com.example.urlplugin;
 
+import com.intellij.ide.BrowserUtil;
+import com.intellij.openapi.application.Application;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.ui.DialogWrapper;
+import com.intellij.ui.jcef.JBCefApp;
+import com.intellij.ui.jcef.JBCefBrowser;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 public class Modal extends DialogWrapper {
+    private Action openLink1;
+    private Action openLink2;
 
     public Modal() {
         super(true);
+
+        if (!JBCefApp.isSupported()) {
+            this.openLink1 = new DialogWrapperAction("Open URL 1") {
+                @Override
+                protected void doAction(ActionEvent e) {
+                    BrowserUtil.browse("https://www.youtube.com/watch?v=hWvM6de6mG8");
+                }
+            };
+
+            this.openLink2 = new DialogWrapperAction("Open URL 2") {
+                @Override
+                protected void doAction(ActionEvent e) {
+                    BrowserUtil.browse("https://www.youtube.com/watch?v=W86cTIoMv2U");
+                }
+            };
+        } else {
+            BrowserService bs = ApplicationManager.getApplication().getService(BrowserService.class);
+            this.openLink1 = new DialogWrapperAction("Open URL 1") {
+                @Override
+                protected void doAction(ActionEvent e) {
+                    bs.browser.loadURL("https://www.youtube.com/watch?v=hWvM6de6mG8");
+                }
+            };
+
+            this.openLink2 = new DialogWrapperAction("Open URL 2") {
+                @Override
+                protected void doAction(ActionEvent e) {
+                    bs.browser.loadURL("https://www.youtube.com/watch?v=W86cTIoMv2U");
+                }
+            };
+        }
         setTitle("URL Dialog Modal");
         init();
     }
@@ -16,5 +56,10 @@ public class Modal extends DialogWrapper {
     @Override
     protected @Nullable JComponent createCenterPanel() {
         return null;
+    }
+
+    @Override
+    protected Action @NotNull [] createActions() {
+        return new Action[]{openLink1, openLink2};
     }
 }
